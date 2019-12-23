@@ -1,4 +1,4 @@
-var money = + prompt("Ваш бюджет на месяц?", ''), // '+' преобразует тип даных в Number
+var money = +prompt("Ваш бюджет на месяц?", ''), // '+' преобразует тип даных в Number
 	time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
 var appData = {
@@ -31,7 +31,7 @@ for (var i = 0; i < 2; i++) {
 		appData.expenses[a] = b;
 		console.log(appData.expenses[a]);
 	} else {
-
+		i--;
 	}
 
 }
@@ -40,7 +40,7 @@ appData.moneyPerDay = appData.budget / 30; // создание нового св
 
 alert("Ежедневный бюджет" + appData.moneyPerDay);
 
-if (appData.moneyPerDay < 100 ) {
+if (appData.moneyPerDay < 100) {
 	console.log("Минимальный уровень достатка");
 } else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
 	console.log("Средний уровень достатка");
